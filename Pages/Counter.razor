@@ -1,0 +1,23 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+<p>Fuck count: @ClickFuckString</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="ClickFuck">Click </button>
+
+@code {
+    private int currentCount = 0;
+    private string ClickFuckString = "";
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+    private void ClickFuck()
+    {
+        ClickFuckString = "FUck you" + "1";
+    }
+}
